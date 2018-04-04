@@ -1,8 +1,13 @@
 import React from 'react';
 import VideoListEntry from './VideoListEntry.js';
 
-var VideoList = ({videos, handleVideoListEntryTitleClick}) => (
+var VideoList = ({ videos, handleVideoListEntryTitleClick, handleAutoplaySwitch, autoplay}) => (
   <div className="video-list">
+    <p>Toggle Autoplay</p>
+    <input type="checkbox" onChange={(e) => {
+      console.log(autoplay);
+      handleAutoplaySwitch(!autoplay);
+    }}/>
     {
       videos.map(video => (
         <VideoListEntry

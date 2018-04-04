@@ -1,8 +1,9 @@
 import searchYouTube from '../lib/searchYouTube.js';
-import changeVideoList from './videoList.js';
+import reducers from './videoList.js';
 import changeVideo from './currentVideo.js';
 import YOUTUBE_API_KEY from '../config/youtube.js';
 
+let changeVideoList = reducers.changeVideoList;
 
 var handleVideoSearch = (q) => {
   return (dispatch) => {

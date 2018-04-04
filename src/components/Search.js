@@ -1,7 +1,9 @@
 import React from 'react';
  
 class Search extends React.Component {
-
+  componentDidMount() {
+    this.props.handleSearchInputChange('Mango vs Leffen Big House 4');
+  }
 
   handleInputChange(e) {
     this.props.handleSearchInputChange(e.target.value);

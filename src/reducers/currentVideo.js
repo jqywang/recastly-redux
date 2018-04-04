@@ -10,4 +10,12 @@ var currentVideoReducer = (state = exampleVideoData[0], action) => {
   }
 };
 
-export default currentVideoReducer;
+var autoplayReducer = (state = false, action) => {
+  if(action.type === 'CHANGE_AUTOPLAY') {
+    return action.autoplay;
+  } else {
+    return state;
+  }
+}
+
+export default {currentVideoReducer, autoplayReducer};
